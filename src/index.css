@@ -292,7 +292,9 @@ a{
 
 .container-contact101-form-btn {
   margin: 0 auto;
-  width: 70%;
+  width: min-content;
+  padding-left: 15px;
+  padding-right: 15px;
   font-style: italic;
   text-align: center;
   border:3px solid white;
@@ -521,11 +523,7 @@ textarea.input100 {
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
-@media (max-width: 576px) {
-  .wrap-contact100 {
-    padding: 72px 15px 65px 15px;
-  }
-}
+
 
 
 
@@ -589,12 +587,7 @@ textarea.input100 {
   opacity: 1;
 }
 
-@media (max-width: 992px) {
-  .alert-validate::before {
-    visibility: visible;
-    opacity: 1;
-  }
-}
+
 
 
 
@@ -728,6 +721,62 @@ textarea.input100 {
 }
 
 
+@media  screen and (max-width:959px) {
+  /* .wrap-contact100 {
+    padding: 72px 15px 65px 15px;
+  } */
+  .title{
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+  }
+  .container-contact100 {
+    align-content: center;
+    width: 100%;
+    position: relative;
+      
+  }
+  .wrap-contact101 {
+    position: absolute;
+    width: 50%;  
+  }
+  .wrap-contact100 {
+    position: absolute;
+    width: 50%;  
+  }
+  .contact101-form-title{
+    width:100%;
 
+  }
 
+  .container-contact101-form-btn.haha{
+    width:100%;
+  }
+}
+
+@media  screen and (max-width:640px) {
+  /* .wrap-contact100 {
+    padding: 72px 15px 65px 15px;
+  } */
+  .container-contact100 {
+  
+    width: 100%;  
+  }
+  .wrap-contact101 {
+  
+    width: 100%;  
+  }
+  .wrap-contact100 {
+  
+    width: 100%;  
+  }
+  .contact101-form-title{
+    width:100%;
+
+  }
+
+  .container-contact101-form-btn.haha{
+    width:100%;
+  }
+}
 
