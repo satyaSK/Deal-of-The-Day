@@ -188,9 +188,13 @@
   margin-top: 25%;
 }
 
+.margin-top-20{
+  margin-top: 20%;
+}
+
 .new-wrap-contact100{
   float: right;
-  width: 57%;
+  width: 65%;
   height: 300px;
   background: #fff;
   border-radius: 10px;
@@ -208,7 +212,7 @@
 
 .new-wrap-contact101{
   float: left;
-  width: 70%;
+  width: 80%;
   height: 300px;
   border-radius: 10px;
   overflow: hidden;
@@ -306,9 +310,8 @@ input.new-input100{
   margin: 0 auto;
   width: -moz-min-content;
   width: min-content;
-  max-width:70%;
-  padding-left: 15px;
-  padding-right: 15px;
+  white-space: nowrap;
+  padding: 0 15px;
   font-style: italic;
   text-align: center;
   border: 3px solid white;

@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:5000/deals/')
+    axios.get('https://dealotd.live/api/deals/')
       .then(response => {
         if (response.data.length > 0){
           this.setState({
@@ -40,7 +40,7 @@ class App extends Component {
       email: this.state.email
     }
     console.log(email);
-    axios.post('http://localhost:5000/emails/add', email)
+    axios.post('https://dealotd.live/api/emails/add', email)
       .then(res => console.log(res.data));
 
     window.location = '/';  
@@ -112,7 +112,7 @@ class App extends Component {
             </div>
             <div className="col-sm-1"></div>
           </div>
-          <div className="row margin-top-25">
+          <div className="row margin-top-20">
             <div className="col-sm-2"></div>
             <div className="col-sm-8">
               <div className="new-wrap-contact100-mobile">
