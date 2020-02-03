@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './bootstrap.css';
 import axios from 'axios';
 
 class App extends Component {
@@ -23,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:5000/deals/')
+    axios.get('https://dealotd.live/api/deals/')
       .then(response => {
         if (response.data.length > 0){
           this.setState({
@@ -39,7 +40,7 @@ class App extends Component {
       email: this.state.email
     }
     console.log(email);
-    axios.post('http://localhost:5000/emails/add', email)
+    axios.post('https://dealotd.live/api/emails/add', email)
       .then(res => console.log(res.data));
 
     window.location = '/';  
@@ -48,46 +49,135 @@ class App extends Component {
   render()
   {
     return(
-      
       <div className="App">
-        
-        <div className="container-contact100">
-          <div className='title'>One Foodaholic Deal. Every Single Day.</div>
-          <div className='wrap-contact101'>
-            <div className='contact101-form-title'>Today's Deal Partner:</div>
-    <div className='container-contact101-form-btn haha'>{this.state.deal}</div>
+        <div className="d-none d-md-block container-fluid background_gradient">
+          <div className="row margin-top-2">
+            <div className="col-md-2"></div>
+            <div className="col-md-8 text-align-center">
+              <div className='new-title'>One Foodaholic Deal. Every Single Day.</div>
+            </div>
+            <div className="col-md-2"></div>
           </div>
-		      <div className="wrap-contact100" >
-			      <form onSubmit={this.onSubmit}className="contact100-form validate-form">
-				    <span className="contact100-form-title">
-              Get Today's Deal?
-				    </span>
-            <div className="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz"type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
-					    <input className="input100" type="text" onChange ={this.onChangeEmail} value = {this.state.email} name="email" placeholder="Plug in ur email <3"/>
-					    <span className="focus-input100"></span>
-				  </div>
+          <div className="row margin-top-6">
+            <div className="col-md-6">
+              <div className="new-wrap-contact100">
+                <form onSubmit={this.onSubmit} className="contact100-form validate-form">
+                  <span className="new-contact100-form-title">
+                    Get Today's Deal?
+                  </span>
+                  <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                    <input className="new-input100" type="text" onChange={this.onChangeEmail} value={this.state.email} name="email" placeholder="Plug in ur email <3" />
+                    <span className="focus-input100"></span>
+                  </div>
 
 
-				<div className="container-contact100-form-btn">
-					<div className="wrap-contact100-form-btn">
-						<div className="contact100-form-bgbtn"></div>
-						<button className="contact100-form-btn">
-							<span>
-							Send me the Secret Code
-								<i className="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-							</span>
-						</button>
-					</div>
-				</div>
-			</form>
-      
-		</div>
-	</div>
-      
-      
-      
+                  <div className="container-contact100-form-btn">
+                    <div className="wrap-contact100-form-btn">
+                      <div className="contact100-form-bgbtn"></div>
+                      <button className="new-contact100-form-btn">
+                        <span>
+                          Send me the Secret Code
+                <i className="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className='new-wrap-contact101'>
+                <div className='new-contact101-form-title'>Today's Deal Partner:</div>
+                <div className='new-container-contact101-form-btn haha'>{this.state.deal}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="d-block d-md-none container-fluid background_gradient">
+          <div className="row margin-top-15">
+            <div className="col-sm-1"></div>
+            <div className="col-sm-10 text-align-center">
+              <div className='new-title-mobile'>One Foodaholic Deal. Every Single Day.</div>
+            </div>
+            <div className="col-sm-1"></div>
+          </div>
+          <div className="row margin-top-25">
+            <div className="col-sm-1"></div>
+            <div className="col-sm-10">
+              <div className='new-wrap-contact101-mobile'>
+                <div className='new-contact101-form-title-mobile'>Today's Deal Partner:</div>
+                <div className='new-container-contact101-form-btn-mobile new-container-contact101-form-btn haha'>{this.state.deal}</div>
+              </div>
+            </div>
+            <div className="col-sm-1"></div>
+          </div>
+          <div className="row margin-top-20">
+            <div className="col-sm-2"></div>
+            <div className="col-sm-8">
+              <div className="new-wrap-contact100-mobile">
+                <form onSubmit={this.onSubmit} className="contact100-form validate-form">
+                  <span className="new-contact100-form-title-mobile new-contact100-form-title">
+                    Get Today's Deal?
+                  </span>
+                  <div className="wrap-input100-mobile validate-input" data-validate="Valid email is required: ex@abc.xyz" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                    <input className="new-input100-mobile new-input100" type="text" onChange={this.onChangeEmail} value={this.state.email} name="email" placeholder="Plug in ur email <3" />
+                    <span className="focus-input100"></span>
+                  </div>
+
+
+                  <div className="container-contact100-form-btn">
+                    <div className="wrap-contact100-form-btn">
+                      <div className="contact100-form-bgbtn"></div>
+                      <button className="new-contact100-form-btn">
+                        <span>
+                          Send me the Secret Code
+                <i className="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div className="col-sm-2"></div>
+          </div>
+        </div>
       </div>
-      
+
+/* <div className="App">
+<div className="container-fluid container-contact100">
+  <div className='title'>One Foodaholic Deal. Every Single Day.</div>
+  <div className='wrap-contact101'>
+    <div className='contact101-form-title'>Today's Deal Partner:</div>
+    <div className='container-contact101-form-btn haha'>{this.state.deal}</div>
+  </div>
+  <div className="wrap-contact100" >
+    <form onSubmit={this.onSubmit} className="contact100-form validate-form">
+      <span className="contact100-form-title">
+        Get Today's Deal?
+    </span>
+      <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+        <input className="input100" type="text" onChange={this.onChangeEmail} value={this.state.email} name="email" placeholder="Plug in ur email <3" />
+        <span className="focus-input100"></span>
+      </div>
+
+
+      <div className="container-contact100-form-btn">
+        <div className="wrap-contact100-form-btn">
+          <div className="contact100-form-bgbtn"></div>
+          <button className="contact100-form-btn">
+            <span>
+              Send me the Secret Code
+        <i className="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div> */
       );
   }
 }
