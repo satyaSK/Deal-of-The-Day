@@ -2,7 +2,6 @@ require('dotenv').config();
 const nodemailer = require('nodemailer');
 const router = require('express').Router();
 let Emails = require('../models/emails.model');
-
 let transporter = nodemailer.createTransport({
 service:'gmail',
 auth: {
