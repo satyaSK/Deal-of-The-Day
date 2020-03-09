@@ -296,6 +296,18 @@ input.new-input100{
   padding-bottom: 5%;
 }
 
+
+.new-contact101-form-footer {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 1.8em;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 40px;
+}
+
+
 .new-contact101-form-title-mobile {
   display: block;
   font-family: Poppins-Bold;
@@ -305,6 +317,8 @@ input.new-input100{
   text-align: center;
   padding-bottom: 5%;
 }
+
+
 
 .new-container-contact101-form-btn {
   margin: 0 auto;
@@ -328,4 +342,9 @@ input.new-input100{
 
 .new-container-contact101-form-btn-mobile{
   font-size: 2.5em !important;
+}
+
+p{
+  font-size: 2.5em;
+  color: white;
 }

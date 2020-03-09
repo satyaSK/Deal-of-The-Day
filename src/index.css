@@ -203,6 +203,18 @@ iframe {
        -o-animation: floating-text 2s ease alternate infinite;
           animation: floating-text 2s ease alternate infinite;
 }
+/* newly added */
+.haha1{
+  font-family: 'Poppins-Bold';
+  font-size:1.6em;
+  
+  
+  -webkit-animation: floating-text 1s ease alternate infinite;
+     -moz-animation: floating-text 1s ease alternate infinite;
+      -ms-animation: floating-text 1s ease alternate infinite;
+       -o-animation: floating-text 1s ease alternate infinite;
+          animation: floating-text 1s ease alternate infinite;
+}
 
 p{
   color:rgba(255,255,255,.5);

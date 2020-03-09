@@ -1,3 +1,7 @@
+//changed routes on get request in app.js
+//changed css
+//added emails/count api endpoint
+
 import React, { Component } from 'react';
 import './App.css';
 import './bootstrap.css';
@@ -13,7 +17,8 @@ class App extends Component {
 
     this.state ={
       email:'',
-      deal:''
+      deal:'',
+      count:0
     }
   }
 
@@ -24,6 +29,7 @@ class App extends Component {
   }
 
   componentDidMount(){
+    
     axios.get('https://dealotd.live/api/deals/')
       .then(response => {
         if (response.data.length > 0){
@@ -31,7 +37,19 @@ class App extends Component {
             deal: response.data[0].deal
           })
         }
+        console.log("heyy")
+        console.log(response)
       })
+    
+    axios.get('http://localhost:5000/emails/count')
+    .then(response => {
+      
+        this.setState({
+          count: response.data.count
+        })
+        console.log("heyy")
+        console.log(response)
+    })
   }
 
   onSubmit(e){
@@ -40,7 +58,7 @@ class App extends Component {
       email: this.state.email
     }
     console.log(email);
-    axios.post('https://dealotd.live/api/emails/add', email)
+    axios.post('http://localhost:5000/emails/add', email)//https://dealotd.live/api/emails/add
       .then(res => console.log(res.data));
 
     window.location = '/';  
@@ -88,12 +106,15 @@ class App extends Component {
             <div className="col-md-6">
               <div className='new-wrap-contact101'>
                 <div className='new-contact101-form-title'>Today's Deal Partner:</div>
-                <div className='new-container-contact101-form-btn haha'>{this.state.deal}</div>
+    <div className='new-container-contact101-form-btn haha'>{this.state.deal}</div>
               </div>
             </div>
           </div>
+    <div className='new-contact101-form-footer'>Hop in with  &nbsp; <span class="haha1">{this.state.count}</span>  &nbsp; others to grab the Deal of the Day!</div>
+          {/* newly added line */}
         </div>
-
+        
+        
         <div className="d-block d-md-none container-fluid background_gradient">
           <div className="row margin-top-15">
             <div className="col-sm-1"></div>
@@ -140,9 +161,11 @@ class App extends Component {
                 </form>
               </div>
             </div>
+            {/* <div className='new-contact101-form-footer'>Hop in with  &nbsp; <span class="haha1">{this.state.count}</span>  &nbsp; others to grab the Deal of the Day!</div> */}
             <div className="col-sm-2"></div>
           </div>
         </div>
+        
       </div>
 
 /* <div className="App">
