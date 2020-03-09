@@ -47,4 +47,14 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+//new code 1/3/2020 //this code works //tested with inomnias
+router.route('/count').get((req,res)=>{
+  Emails.countDocuments({})
+  .then((result)=>{
+    console.log(result)
+    res.send({count: result})
+  })
+  .catch(()=>{console.log("Count cannot be found due to technical errors")})
+})
+
 module.exports = router;
