@@ -37,18 +37,13 @@ class App extends Component {
             deal: response.data[0].deal
           })
         }
-        console.log("heyy")
-        console.log(response)
       })
     
-    axios.get('http://localhost:5000/emails/count')
+    axios.get('https://dealotd.live/api/emails/count')
     .then(response => {
-      
         this.setState({
           count: response.data.count
         })
-        console.log("heyy")
-        console.log(response)
     })
   }
 
@@ -58,9 +53,8 @@ class App extends Component {
       email: this.state.email
     }
     console.log(email);
-    axios.post('http://localhost:5000/emails/add', email)//https://dealotd.live/api/emails/add
+    axios.post('https://dealotd.live/api/emails/add', email)//https://dealotd.live/api/emails/add
       .then(res => console.log(res.data));
-
     window.location = '/';  
   }
 
@@ -110,7 +104,7 @@ class App extends Component {
               </div>
             </div>
           </div>
-    <div className='new-contact101-form-footer'>Hop in with  &nbsp; <span class="haha1">{this.state.count}</span>  &nbsp; others to grab the Deal of the Day!</div>
+    <div className='new-contact101-form-footer'>Hop in with  &nbsp; <span className="haha1">{this.state.count}</span>  &nbsp; others to grab the Deal of the Day!</div>
           {/* newly added line */}
         </div>
         
