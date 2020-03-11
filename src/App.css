@@ -177,7 +177,11 @@
 
 .new-title-mobile{
   font-family: Poppins-Bold;
-  font-size: 1.2em;
+  font-size: 1em;
+}
+
+.margin-top-10{
+  margin-top: 10%;
 }
 
 .margin-top-15{
@@ -307,11 +311,20 @@ input.new-input100{
   padding-top: 40px;
 }
 
+.new-contact101-form-footer-mobile {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 0.7em;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 40px;
+}
 
 .new-contact101-form-title-mobile {
   display: block;
   font-family: Poppins-Bold;
-  font-size: 1.7em;
+  font-size: 1.2em;
   color: white;
   line-height: 1.2;
   text-align: center;
@@ -320,7 +333,7 @@ input.new-input100{
 
 
 
-.new-container-contact101-form-btn {
+.new-container-contact101-form-btn > a {
   margin: 0 auto;
   width: -moz-min-content;
   width: min-content;
@@ -330,7 +343,7 @@ input.new-input100{
   text-align: center;
   border: 3px solid white;
   font-family: Poppins-Bold;
-  font-size: 3em;
+  font-size: 1em;
   color: white;
   display: -ms-flexbox;
   display: flex;
@@ -340,11 +353,28 @@ input.new-input100{
   justify-content: center;
 }
 
+.new-container-contact101-form-btn>a:hover{
+  text-decoration: none!important;
+  color: white !important;
+}
+
 .new-container-contact101-form-btn-mobile{
-  font-size: 2.5em !important;
+  font-size: 2em !important;
 }
 
 p{
   font-size: 2.5em;
   color: white;
+}
+
+.haha1-mobile{
+  font-family: 'Poppins-Bold';
+  font-size:1.2em;
+  
+  
+  -webkit-animation: floating-text 1s ease alternate infinite;
+     -moz-animation: floating-text 1s ease alternate infinite;
+      -ms-animation: floating-text 1s ease alternate infinite;
+       -o-animation: floating-text 1s ease alternate infinite;
+          animation: floating-text 1s ease alternate infinite;
 }

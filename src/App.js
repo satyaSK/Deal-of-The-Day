@@ -100,7 +100,7 @@ class App extends Component {
             <div className="col-md-6">
               <div className='new-wrap-contact101'>
                 <div className='new-contact101-form-title'>Today's Deal Partner:</div>
-    <div className='new-container-contact101-form-btn haha'>{this.state.deal}</div>
+    <div className='new-container-contact101-form-btn haha'><a href="https://mu.oregonstate.edu/north-porch-cafe">{this.state.deal}</a></div>
               </div>
             </div>
           </div>
@@ -117,17 +117,17 @@ class App extends Component {
             </div>
             <div className="col-sm-1"></div>
           </div>
-          <div className="row margin-top-25">
+          <div className="row margin-top-15">
             <div className="col-sm-1"></div>
             <div className="col-sm-10">
               <div className='new-wrap-contact101-mobile'>
                 <div className='new-contact101-form-title-mobile'>Today's Deal Partner:</div>
-                <div className='new-container-contact101-form-btn-mobile new-container-contact101-form-btn haha'>{this.state.deal}</div>
+                <div className='new-container-contact101-form-btn-mobile new-container-contact101-form-btn haha'><a href="https://mu.oregonstate.edu/north-porch-cafe">{this.state.deal}</a></div>
               </div>
             </div>
             <div className="col-sm-1"></div>
           </div>
-          <div className="row margin-top-20">
+          <div className="row margin-top-10">
             <div className="col-sm-2"></div>
             <div className="col-sm-8">
               <div className="new-wrap-contact100-mobile">
@@ -158,6 +158,8 @@ class App extends Component {
             {/* <div className='new-contact101-form-footer'>Hop in with  &nbsp; <span class="haha1">{this.state.count}</span>  &nbsp; others to grab the Deal of the Day!</div> */}
             <div className="col-sm-2"></div>
           </div>
+          <div className='new-contact101-form-footer-mobile'>Hop in with  &nbsp; <span className="haha1-mobile">{this.state.count}</span>  &nbsp; others to grab the Deal of the Day!</div>
+
         </div>
         
       </div>
